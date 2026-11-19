@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#fff7fb">
+<title>For You 💌</title>
+<style>
+:root{--ink:#392b3a;--muted:#786879;--pink:#f4c9d9;--rose:#b85e7d;--cream:#fffaf6;--lilac:#e8def8}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at top left,#fce6ef,transparent 38%),linear-gradient(135deg,#fffaf6,#f7f0ff);font-family:Georgia,"Times New Roman",serif;color:var(--ink);min-height:100vh}
+main{width:min(100% - 32px,960px);margin:auto;padding:54px 0 70px}
+header{text-align:center;margin-bottom:34px} .eyebrow{letter-spacing:.18em;text-transform:uppercase;color:var(--rose);font:12px Arial,sans-serif}
+h1{font-size:clamp(34px,7vw,58px);font-weight:normal;margin:12px 0}header p{color:var(--muted);font:15px/1.6 Arial,sans-serif;margin:0 auto;max-width:540px}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.card{background:#ffffffd9;border:1px solid #f1dce6;border-radius:26px;padding:28px;box-shadow:0 14px 40px #67435d12;display:flex;flex-direction:column;min-height:270px}
+.card .emoji{font-size:38px}.card h2{font-weight:normal;font-size:29px;margin:16px 0 8px}.card p{font:14px/1.7 Arial,sans-serif;color:var(--muted);margin:0 0 22px;flex:1}
+button{border:0;border-radius:999px;padding:13px 20px;background:#a95778;color:white;font:14px Arial,sans-serif;cursor:pointer}
+button:hover{filter:brightness(.95)}.secondary{background:#78628d}
+.panel{display:none;margin-top:24px;background:#fff;border:1px solid #f0dce7;border-radius:26px;padding:clamp(20px,4vw,34px);box-shadow:0 12px 35px #67435d12}
+.panel.active{display:block}.panel h2{font-size:30px;font-weight:normal;margin:0 0 12px}.intro{font:15px/1.7 Arial,sans-serif;color:var(--muted)}
+.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:22px 0}
+.photo{aspect-ratio:4/5;border-radius:16px;background:linear-gradient(145deg,#f8e3ed,#eee6f8);overflow:hidden;display:flex;align-items:center;justify-content:center;color:#8a7184;text-align:center;font:13px/1.5 Arial,sans-serif;padding:8px}
+.photo img{width:100%;height:100%;object-fit:cover;display:block}
+.audio{margin:18px 0;padding:16px;background:#fff7fa;border-radius:16px}.audio label{display:block;font:13px Arial,sans-serif;color:var(--muted);margin-bottom:9px}
+audio{width:100%}
+.letter{font:17px/1.85 Georgia,serif;white-space:pre-line;background:#fff9fb;border-left:3px solid var(--pink);padding:20px;border-radius:0 16px 16px 0;margin:22px 0}
+.single-photo{width:min(100%,420px);margin:18px auto;border-radius:18px;overflow:hidden;background:#f6e8ef;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;color:#8a7184;font:14px Arial,sans-serif;text-align:center;padding:12px}
+.single-photo img{width:100%;height:100%;object-fit:cover}
+.back{background:#eee7f0;color:#57475b;margin-top:8px}
+footer{text-align:center;color:#987f91;font:12px Arial,sans-serif;margin-top:36px}
+@media(max-width:650px){main{padding-top:36px}.cards{grid-template-columns:1fr}.card{min-height:220px}.gallery{gap:8px}.panel{padding:20px}}
+</style>
+</head>
+<body>
+<main>
+<header>
+ <div class="eyebrow">a little something for you</div>
+ <h1>Whenever You Need Me 💌</h1>
+ <p>Two little cards, and a whole lot of feelings. Open whichever one you need today.</p>
+</header>
+<section class="cards" aria-label="Choose a card">
+ <article class="card">
+  <div class="emoji">🌷</div><h2>Happy Men’s Day</h2>
+  <p>A reminder that you matter, you are appreciated, and you don't have to handle every difficult day alone.</p>
+  <button onclick="showPanel('mens')">Open your card</button>
+ </article>
+ <article class="card">
+  <div class="emoji">🥺</div><h2>I’m Sorry, My Person</h2>
+  <p>For the moments I didn't handle things the way I should have. This one comes straight from my heart.</p>
+  <button class="secondary" onclick="showPanel('sorry')">Open my apology</button>
+ </article>
+</section>
+
+<section id="mens" class="panel">
+ <h2>Happy Men’s Day 🤍</h2>
+ <p class="intro">Three little moments for you. Scroll through them, and play my voice note when you feel like listening.</p>
+ <div class="gallery">
+  <div class="photo" data-image="media/mens-day-1.png">Your photo 1<br><small>Replace mens-day-1.jpg</small></div>
+  <div class="photo" data-image="media/mens-day-2.png">Your photo 2<br><small>Replace mens-day-2.jpg</small></div>
+  <div class="photo" data-image="media/mens-day-3.png">Your photo 3<br><small>Replace mens-day-3.jpg</small></div>
+ </div>
+ <div class="letter">And hey… if you ever feel really low, I’m here. You don't have to pretend you're okay with me. You can talk, stay quiet, cry, or just be yourself. I want to be there for you, even on the days when everything feels heavy.
+
+“mi halu ahe, mla adhi vc kela mi nhi uchlat, dole pustoh, mg vc uchltoh ani parat radtoh, awwwww” 🥺
+
+Awww. I wish I could give you the biggest hug. Please remember that you don't have to go through everything alone. I'm here, okay? 🤍</div>
+ <div class="audio"><label>🎧 A little voice note for you</label><audio controls preload="none" src="media/mens-day-voice.mp3">Your browser does not support audio.</audio></div>
+ <button class="back" onclick="hidePanels()">← Back to cards</button>
+</section>
+
+<section id="sorry" class="panel">
+ <h2>I’m Sorry, My Person 🥺</h2>
+ <p class="intro">I want you to know that I mean this, and I'm not saying it just to end an argument.</p>
+ <div class="single-photo" data-image="media/sorry-photo.jpg">Your picture together<br><small>Replace sorry-photo.jpg</small></div>
+ <div class="letter">I'm genuinely sorry for shouting, arguing, misunderstanding you, and going against you. I know there were moments when my anger and ego took over, and instead of understanding you, I reacted in ways that hurt you.
+
+I don't want to make excuses or put the blame on anything or anyone else. I know I made mistakes, and I truly regret them.
+
+I will try harder to listen to you, understand what you're saying, communicate calmly, and think before reacting. You deserve patience and understanding, not unnecessary arguments.
+
+I don't expect everything to become okay in one moment. I just want you to know that I care, that I'm sorry, and that I really want us to be okay again.
+
+I'm sorry, my person. ❤️</div>
+ <div class="audio"><label>🎧 My sorry voice note</label><audio controls preload="none" src="media/sorry-voice.mp3">Your browser does not support audio.</audio></div>
+ <button class="back" onclick="hidePanels()">← Back to cards</button>
+</section>
+<footer>Made with love, just for you. 💗</footer>
+</main>
+<script>
+function showPanel(id){hidePanels();document.getElementById(id).classList.add('active');document.getElementById(id).scrollIntoView({behavior:'smooth',block:'start'});}
+function hidePanels(){document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));window.scrollTo({top:0,behavior:'smooth'});}
+document.querySelectorAll('[data-image]').forEach(slot=>{
+ const path=slot.getAttribute('data-image');
+ const img=new Image();
+ img.onload=()=>{slot.textContent='';slot.appendChild(img);};
+ img.src=path;
+});
+</script>
+</body>
+</html>
