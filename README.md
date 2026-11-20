@@ -67,3 +67,6 @@ Then refresh.
 - The password gate is intended as a sweet surprise, not protection for private content.
 - The audio player is optional; add your own licensed or personally recorded audio.
 - If you want a public website, remember that anything you put in its files can be viewed by visitors.
+
+### **final link of website**
+https://manud-com.github.io/surprise/?utm_source=chatgpt.com
